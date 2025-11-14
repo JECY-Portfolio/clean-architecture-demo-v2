@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>clean_architecture_demo_v2.Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Blogs\Commands\CreateBlog\" />
+    <Folder Include="Blogs\Commands\DeleteBlog\" />
+    <Folder Include="Blogs\Commands\UpdateBlog\" />
+    <Folder Include="Blogs\Common\Behaviours\" />
+    <Folder Include="Blogs\Common\Exceptions\" />
+    <Folder Include="Blogs\Common\Mappings\" />
+    <Folder Include="Blogs\Queries\GetBlogs\" />
+    <Folder Include="Blogs\Queries\GetBlogById\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\clean-architecture-demo-v2.Domain\clean-architecture-demo-v2.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
