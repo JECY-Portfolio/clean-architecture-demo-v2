@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using clean_architecture_demo_v2.Application.Blogs.Common.Mappings;
+using clean_architecture_demo_v2.Domain.Entity;
 
 namespace clean_architecture_demo_v2.Application.Blogs.Queries.GetBlogs
 {
-    public class BlogVm
+    public class BlogVm : IMapFrom<Blog>
     {
         public int Id { get; set; }
         public string Name { get; set; }

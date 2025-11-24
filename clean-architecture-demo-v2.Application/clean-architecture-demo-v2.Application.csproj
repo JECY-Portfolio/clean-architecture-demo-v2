@@ -8,13 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Blogs\Commands\CreateBlog\" />
-    <Folder Include="Blogs\Commands\DeleteBlog\" />
-    <Folder Include="Blogs\Commands\UpdateBlog\" />
     <Folder Include="Blogs\Common\Behaviours\" />
     <Folder Include="Blogs\Common\Exceptions\" />
-    <Folder Include="Blogs\Common\Mappings\" />
-    <Folder Include="Blogs\Queries\GetBlogById\" />
   </ItemGroup>
 
   <ItemGroup>
