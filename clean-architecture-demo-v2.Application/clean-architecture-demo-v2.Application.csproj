@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Blogs\Common\Behaviours\" />
     <Folder Include="Blogs\Common\Exceptions\" />
   </ItemGroup>
 
