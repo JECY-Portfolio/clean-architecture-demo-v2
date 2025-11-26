@@ -1,10 +1,5 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace clean_architecture_demo_v2.Application.Blogs.Common.Mappings
 {
@@ -40,13 +35,15 @@ namespace clean_architecture_demo_v2.Application.Blogs.Common.Mappings
                         .Where(HasInterface)
                         .ToList();
 
-                if (interfaces.Count == 0)
-                        
-                    foreach (var @interface in interfaces)
+                    if (interfaces.Count > 0)
                     {
-                        var interfaceMethodInfo = @interface.GetMethod(mappingMethodName, argumentTypes);
-                        interfaceMethodInfo?.Invoke(instance, new object[] { this });
+                        foreach (var @interface in interfaces)
+                        {
+                            var interfaceMethodInfo = @interface.GetMethod(mappingMethodName);
+                            interfaceMethodInfo?.Invoke(instance, new object[] { this });
+                        }
                     }
+
                 }
             }
 
